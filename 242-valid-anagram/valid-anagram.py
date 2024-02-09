@@ -2,19 +2,12 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
-        s_map = {}
-        t_map = {}
+        freq_map = defaultdict(int)
         for i in s:
-            if s_map.get(i) is None:
-                s_map[i] = 1
-            else:
-                s_map[i] += 1
+           freq_map[i] += 1
         for i in t:
-            if t_map.get(i) is None:
-                t_map[i] = 1
-            else:
-                t_map[i] += 1
-        return s_map == t_map
+            freq_map[i] -= 1
+        return all(x == 0 for x in freq_map.values())
             
 
         
