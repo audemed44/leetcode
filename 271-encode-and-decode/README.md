@@ -9,7 +9,7 @@ Please implement <code>encode</code> and <code>decode</code>
 <pre>
 <strong>Input:</strong> ["neet","code","love","you"]
 <strong>Output:</strong> ["neet","code","love","you"]
-
+</pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
