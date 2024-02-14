@@ -5,7 +5,6 @@ class Solution:
         while r>=l:
             mid = (l+r)//2
             if target >= matrix[mid][0] and target <= matrix[mid][-1]:
-                print(mid)
                 break
             elif target > matrix[mid][-1]:
                 l = mid + 1
