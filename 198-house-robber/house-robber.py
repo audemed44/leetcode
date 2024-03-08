@@ -1,12 +1,10 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        def helper(cur, dp={}):
-            if cur < 0: 
-                return 0
-            if cur == 0:
-                return nums[0]
-            if cur in dp:
-                return dp[cur]
-            dp[cur] = max(helper(cur-2)+nums[cur],helper(cur-1))
-            return dp[cur]
-        return helper(len(nums)-1)
+        if len(nums) <= 1:
+            return nums[0]
+        dp = [0]*len(nums)
+        dp[0] = nums[0]
+        dp[1] = max(nums[1],nums[0])
+        for i in range(2,len(nums)):
+            dp[i] = max(nums[i]+dp[i-2],dp[i-1])
+        return dp[-1]
