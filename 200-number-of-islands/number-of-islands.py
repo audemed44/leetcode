@@ -12,7 +12,7 @@ class Solution:
             q = deque()
             q.append((r,c))
             while q:
-                i, j = q.popleft()
+                i, j = q.pop()
                 if (i >= 0 and
                     j >= 0 and
                     i < len(grid) and
