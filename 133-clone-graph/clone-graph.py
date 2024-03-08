@@ -13,7 +13,6 @@ class Solution:
         def dfs(node):
             if node in old_new_map:
                 return old_new_map[node]
-            
             clone = Node(node.val)
             old_new_map[node] = clone
             for neighbor in node.neighbors:
