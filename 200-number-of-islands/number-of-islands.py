@@ -12,7 +12,7 @@ class Solution:
             q = deque()
             q.append((r,c))
             while q:
-                i, j = q.popleft() # change to pop() for dfs
+                i, j = q.popleft() # this is bfs, change to pop() for dfs
                 if (i >= 0 and
                     j >= 0 and
                     i < len(grid) and
