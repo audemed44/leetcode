@@ -1,7 +1,8 @@
 class Solution:
     def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
         total_num = 0
-        count = Counter({0:1})
+        count = defaultdict(int)
+        count[0] = 1
         current_sum = 0
         for i in range(len(nums)):
             current_sum += nums[i]
