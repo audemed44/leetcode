@@ -26,8 +26,8 @@ class Solution:
                 dfs(0,col)
             if (ROWS-1,col) in visited or board[ROWS-1][col] == "O":
                 dfs(ROWS-1,col)
-        for row in range(ROWS):
-            for col in range(COLS):
+        for row in range(1,ROWS-1):
+            for col in range(1,COLS-1):
                 if (row,col) not in visited:
                     board[row][col] = "X"
 
